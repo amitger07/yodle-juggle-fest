@@ -1,4 +1,4 @@
-My solution to Yodle's puzzle found at http://www.yodlecareers.com/puzzles/jugglefest.html . Uses Bellman-Ford algorithm to find the maximum path from top to bottom.
+My solution to Yodle's puzzle found at http://www.yodlecareers.com/puzzles/jugglefest.html . Adapted Stable Matching algorithm found in Algorith Design by Kleinberg and Tardos.
 
 Instructions:
 

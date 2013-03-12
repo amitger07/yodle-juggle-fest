@@ -241,70 +241,7 @@ class StableJugglefestMatcher {
                 }
             }
         }
-
-//        while (!allJugglersAssigned) {
-//            allJugglersAssigned = true;
-//            for (int jugglerIndex = 0; jugglerIndex < jugglersSize; jugglerIndex++) {
-//                currentJuggler = myJugglers.get(jugglerIndex);
-//
-//                // continue if this juggler is unassigned
-//
-//                if (!currentJuggler.isMatched()) {
-//                    preferenceIndex = currentJuggler.getIndex() + 1;
-//                    preferences = currentJuggler.getPreferences();
-//                    preferencesLength = preferences.length; //for optimization
-//                    scores = currentJuggler.getScores();
-//
-//
-//                    //iterate through all circuits in a juggler's preference list
-//
-//                    while (preferenceIndex < preferencesLength) {
-//                        currentCircuit = myCircuits.get(preferences[preferenceIndex]);
-//                        currentJuggler.setCurrentCircuit(currentCircuit.getID()); //associate the juggler with the current circuit
-//                        currentJuggler.setCurrentScore(scores[preferenceIndex]);//give the juggler a score
-//                        currentJuggler.setIndex(preferenceIndex);
-//
-//                        if (currentCircuit.getJugglers().size() < jugglersPerCircuit) {
-//                            currentJuggler.setMatched(true);
-//                            currentCircuit.addJuggler(currentJuggler);
-//                            break;
-//
-//                        } //else if the juggler has a higher score than the circuit's minimum score, replace the lowest scoring juggler with this one
-//                        else if (currentJuggler.getCurrentScore() > currentCircuit.getMinScore()) {
-//                            currentCircuit.replaceWorstJuggler(currentJuggler);
-//                            allJugglersAssigned = false;
-//                            break;
-//                        } else //if neither is possible, go to the next circuit on the juggler's preference list
-//                        {
-//                            preferenceIndex++;
-//                        }
-//                    }
-//
-//                    //if the juggler is still unassigned, assign it to a random circuit
-//                    if (!currentJuggler.isMatched()) {
-//                        while (true) {
-//                            Circuit randomCircuit = myCircuits.get(randomGenerator.nextInt(2000));
-//                            currentJuggler.setCurrentCircuit(randomCircuit.getID());
-//                            currentJuggler.setCurrentScore(StableJugglefestMatcher.computeDotProduct(randomCircuit, currentJuggler));
-//
-//                            //if the circuit is not filled, assign this juggler to it
-//                            if (randomCircuit.getJugglers().size() < jugglersPerCircuit) {
-//                                currentJuggler.setMatched(true);
-//                                randomCircuit.addJuggler(currentJuggler);
-//                                break;
-//
-//                                //else if this juggler has a higher score than the circuit's minimum score, replace that circuit's worst juggler
-//                            } else if (currentJuggler.getCurrentScore() > randomCircuit.getMinScore()) {
-//                                randomCircuit.replaceWorstJuggler(currentJuggler);
-//                                allJugglersAssigned = false;
-//                                break;
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-    }
+	}
 
     /**
      * Used to find the output as per Yodle's specifications
